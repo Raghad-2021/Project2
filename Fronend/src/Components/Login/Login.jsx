@@ -1,0 +1,18 @@
+import React from 'react'
+
+export default function Login() {
+    return (
+        <div className="vh-100 bg-info d-flex text-light justify-content-center align-items-center">
+            <div style={{ height:"450px ", borderRadius:"15px "}} className=" p-2 col-md-3 bg-dark text-center   ">
+                <h2 > Email </h2>
+                <input className="form-control mb-5 w-75 m-auto" />
+                <h2> Password </h2>
+                <input type="password" className=" m-auto mb-5 form-control w-75 m-3" />
+
+                <button className=" btn btn-info px-5 fw-bold py-1"> log in </button>
+                <p className="mt-2 mb-5"> Register </p>
+                <h6> Forget password?</h6>
+            </div>
+        </div>
+    )
+}
