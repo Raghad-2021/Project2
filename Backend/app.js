@@ -20,7 +20,7 @@ app.get("/Dispensaries", (req, res) => {
   res.status(200);
   res.json(Dispensaries);
 });
-app.get("/Dates/:id",(req,res)=>{
+app.get("/dates/:id",(req,res)=>{
   let resArr = []
   const idd = req.params.id
   console.log(idd)
