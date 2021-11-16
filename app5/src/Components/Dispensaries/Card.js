@@ -1,7 +1,8 @@
 
 import React, { useState ,useEffect } from 'react'
 import { useParams } from "react-router-dom";
-import axios, { Axios } from 'axios';
+
+import axios from 'axios';
 // import { useGoogleMaps } from "react-hook-google-maps";
 import "./st.css"
 export default function Card() {
@@ -9,7 +10,7 @@ export default function Card() {
     const[CardList, setCardList] = useState([])
     
     useEffect(async() => {
-        const result = await axios.get(`http://localhost:5000/Dates/${p.id}`);
+        const result = await axios.get(`http://localhost:5000/dates/${p.id}`);
         console.log(result.data,"result.data")
         setCardList(result.data);
      },[])
@@ -37,7 +38,7 @@ export default function Card() {
                  <ul>
                  <h4>{CardList[0] && CardList[0].service[0]}</h4>
                  <h4>{CardList[0] && CardList[0].service[1]}</h4>
-                 <h4 >{CardList[0] && CardList[0].service[2]}</h4>
+                 <h4>{CardList[0] && CardList[0].service[2]}</h4>
                  <h4>{CardList[0] && CardList[0].service[3]}</h4>
                  <h4>{CardList[0] && CardList[0].service[4]}</h4>
                  </ul>
