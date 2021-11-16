@@ -1,6 +1,6 @@
 import React, {useState ,useEffect}from 'react'
-import axios from 'axios'
-import {AiTwotoneHeart} from "react-icons/ai"
+import axios from 'axios';
+// import {AiTwotoneHeart} from "react-icons/ai"
 import { useHistory } from "react-router-dom";
 
 export default function Dispensaries() {
@@ -32,7 +32,7 @@ export default function Dispensaries() {
            <img className="w-100 h-100" src={elem.img} alt="mj" /></div></p>
            {/* <p>{elem.Location}</p> */}
 
-           <AiTwotoneHeart  style={{color:'red' }} /> <br/>
+           {/* <AiTwotoneHeart  style={{color:'red' }} /> <br/> */}
 
             {/* <a href={elem.location1}>Google MAP </a> */}
              </div>
