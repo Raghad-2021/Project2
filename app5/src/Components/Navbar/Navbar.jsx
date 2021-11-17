@@ -31,7 +31,7 @@ export default function Navbar(props) {
         <button onClick={props.myFunction} className="btn btn-outline-success my-2 my-sm-0">Search</button>
         </div>
             
-            <NavLink className="nav-link text-light fs-5 fw-bold  ms-4" to="/login"> Log in  <i class="fas fa-user-check text-light"></i> </NavLink>
+            <NavLink className="nav-link text-light fs-5 fw-bold  ms-4" to="/login  "> Log in  <i class="fas fa-user-check text-light"></i> </NavLink>
             <NavLink className="nav-link text-light fs-5 fw-bold  ms-4" to="/rigister"> Register  <i class="fas fa-user-plus"></i> </NavLink>
         
     </div>
