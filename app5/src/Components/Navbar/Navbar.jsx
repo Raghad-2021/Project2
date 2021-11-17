@@ -1,11 +1,30 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink,Link } from 'react-router-dom'
+import "./Navbar.css"
 
-
-export default function Navbar(props) {
+export default function Navbar() {
     return (
      <div>
-  <nav className="navbar navbar-expand-md navbar-dark bg-dark ">
+         
+            <section id="main">
+                    <div className="nav-item">
+                        <a className="navbar-brand" href="/"> Directory</a>
+                    </div>
+                    <div className="main-row">
+                        <div className="main-row-img">
+                            {/* <img className="head-phone-img" src={HeadPhone} alt=""/> */}
+                        </div>
+                        <div className="main-row-text">
+                            <h1>دليل للمستوصفات</h1>
+                            <p> لستهيل الوصول للخدمات العلاجية</p>
+                            <Link to={"/dispensaries"} className="btn">
+                            لدخول أضغط هنا
+                            </Link>
+                        </div>
+                    </div>
+            </section>
+
+  {/* <nav className="navbar navbar-expand-md navbar-dark bg-dark ">
     <div className="container">
       <a style={{fontSize:"30px"}} className="navbar-brand fw-bold text-warning" to="#">Clinic</a>
       <button className="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,7 +55,7 @@ export default function Navbar(props) {
         
     </div>
     </div>
-</nav>
+</nav> */}
 </div>
 
     )

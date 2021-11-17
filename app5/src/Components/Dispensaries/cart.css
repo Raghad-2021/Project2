@@ -1,0 +1,19 @@
+*{
+    text-align: center;
+}
+.dd{
+   
+    display: flex;
+    justify-content: space-between;
+    font-family: cursive, wh;
+    font-size: x-large;
+  
+    align-items: center;
+    
+    padding: 0 10rem;
+    position: relative;
+
+}
+h1{
+    background-color: cadetblue;
+}
