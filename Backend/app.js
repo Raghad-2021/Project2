@@ -30,7 +30,11 @@ for(let i=0;i<Dispensaries.length;i++){
   // console.log(resArr)
 res.json(resArr)
 })
+<<<<<<< HEAD
 app.post("/like/:id",(req,res)=>{
+=======
+app.post("/like/:id",(req,res)=>{   //l
+>>>>>>> ad41fa4ec9fbff4e8ecc8126a3f4a7bd5d5f0229
   const id = req.params.id
   // console.log(id)
 for(let i=0;i<Dispensaries.length;i++){
@@ -39,7 +43,11 @@ for(let i=0;i<Dispensaries.length;i++){
       Dispensaries[i].key=false}
       else{
         Dispensaries[i].key=true
+<<<<<<< HEAD
     }
+=======
+    }  //l
+>>>>>>> ad41fa4ec9fbff4e8ecc8126a3f4a7bd5d5f0229
   }}
   res.status(200)
 res.json(Dispensaries)
@@ -54,11 +62,19 @@ app.post("/login", (req, res) => {
   let password = req.body.password;
   for (let i = 0; i < users.length; i++) {
     if (users[i].UserName === username && users[i].PassWord === password) {
+<<<<<<< HEAD
       res.send("login correct");
     }
   }
   res.status(200);
   res.json("login failed");
+=======
+      res.send("welcome");
+    }
+  }
+  res.status(200);
+  res.json(" Please enter the correct username or password ");
+>>>>>>> ad41fa4ec9fbff4e8ecc8126a3f4a7bd5d5f0229
 });
 app.get("/comment/:id", (req, res) => {
   const id=req.params.id

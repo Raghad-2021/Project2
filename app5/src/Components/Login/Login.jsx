@@ -41,7 +41,11 @@ export default function NavBar() {
           className="form-control mb-5 w-75 m-auto" />
 
                  <h2> Password </h2>
+<<<<<<< HEAD
                  <input onChange={(e) => {    interbass(e);  }} type="text" placeholder="Password"className=" m-auto mb-5 form-control w-75 m-3" />
+=======
+                 <input onChange={(e) => {    interbass(e);  }} type="Password" placeholder="Password"className=" m-auto mb-5 form-control w-75 m-3" />
+>>>>>>> ad41fa4ec9fbff4e8ecc8126a3f4a7bd5d5f0229
         
               
            

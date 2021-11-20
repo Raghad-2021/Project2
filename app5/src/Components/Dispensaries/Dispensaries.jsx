@@ -7,7 +7,11 @@ import "./st.css"
 export default function Dispensaries() {
   const [DispensariesArr, setDispensariesArr] = useState([])
   const history = useHistory();
+<<<<<<< HEAD
   const [valueInput, setvalueInput] = useState('');
+=======
+  const [valueInput, setvalueInput] = useState('');   //s
+>>>>>>> ad41fa4ec9fbff4e8ecc8126a3f4a7bd5d5f0229
 
   useEffect(async() => {
 
@@ -19,22 +23,35 @@ export default function Dispensaries() {
         history.push(`/card/${id}`);
       }
 
+<<<<<<< HEAD
       function setvalue(e) {
+=======
+      function setvalue(e) {    //s
+>>>>>>> ad41fa4ec9fbff4e8ecc8126a3f4a7bd5d5f0229
         let v = e.target.value;
         setvalueInput(v)
      }
       function serch(e) {
           let newArr = DispensariesArr.filter((item)=>item.name ==valueInput );
           setDispensariesArr(newArr)
+<<<<<<< HEAD
     }
   const likefun=async(id)=>{
+=======
+    }               //s
+  const likefun=async(id)=>{    // l b
+>>>>>>> ad41fa4ec9fbff4e8ecc8126a3f4a7bd5d5f0229
   
     console.log(id);
 const likes = await axios.post(`http://localhost:5000/like/${id}`)
 setDispensariesArr(likes.data)
 console.log(likes,"llllllllllllllllllllllllllllllll")
   
+<<<<<<< HEAD
 }
+=======
+}       // l b
+>>>>>>> ad41fa4ec9fbff4e8ecc8126a3f4a7bd5d5f0229
     return (
       <>
       
