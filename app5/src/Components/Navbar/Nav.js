@@ -1,10 +1,27 @@
 import React from 'react'
 import { NavLink,Link } from 'react-router-dom'
+import "./nav.css"
+import { AiFillHome } from 'react-icons/ai';
+import { FaHospitalAlt } from 'react-icons/fa';
+import { BiLogIn } from 'react-icons/bi';
 
 export default function Nav(props) {
     return (
-        <div>
-                 <nav className="navbar navbar-expand-md navbar-dark bg-dark ">
+        <div class="topnav">
+ <ul>
+       
+            <Link  className="aa" to="/"><AiFillHome/></Link>
+        
+            <Link   className="aa" to="/dispensaries"><FaHospitalAlt/></Link>
+  
+        <input onChange={props.fun}type="text" className="se" placeholder="Search" />
+        <button className="xx" onClick={props.myFunction} >Search</button>
+  
+            <Link className="ll" to="/Login"><BiLogIn/></Link>
+
+       
+        </ul>
+                 {/* <nav className=" navbar navbar-expand-lg navbar-dark  bg-light">
     <div className="container">
       <a style={{fontSize:"30px"}} className="navbar-brand fw-bold text-warning" to="#">Clinic</a>
       <button className="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,9 +48,9 @@ export default function Nav(props) {
             <NavLink className="nav-link text-light fs-5 fw-bold  ms-4" to="/Login"> Log in  <i class="fas fa-user-check text-light"></i> </NavLink>
             {/* <NavLink className="nav-link text-light fs-5 fw-bold  ms-4" to="/rigister"> Register  <i class="fas fa-user-plus"></i> </NavLink> */}
         
+    {/* </div>
     </div>
-    </div>
-</nav>
+</nav> */} 
 
         </div>
     )

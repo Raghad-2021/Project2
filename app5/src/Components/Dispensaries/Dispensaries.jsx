@@ -7,25 +7,37 @@ import "./st.css"
 export default function Dispensaries() {
   const [DispensariesArr, setDispensariesArr] = useState([])
   const history = useHistory();
-  const [valueInput, setvalueInput] = useState('')
+  const [valueInput, setvalueInput] = useState('');
 
   useEffect(async() => {
+
     const Dispensaries = await axios.get("http://localhost:5000/Dispensaries")
    setDispensariesArr(Dispensaries.data)
       }, [])
-      const goToCard  =(id)=>{
+
+        const goToCard  =(id)=>{
         history.push(`/card/${id}`);
       }
+
       function setvalue(e) {
         let v = e.target.value;
         setvalueInput(v)
-  }
+     }
       function serch(e) {
           let newArr = DispensariesArr.filter((item)=>item.name ==valueInput );
           setDispensariesArr(newArr)
-  }
+    }
+  const likefun=async(id)=>{
+  
+    console.log(id);
+const likes = await axios.post(`http://localhost:5000/like/${id}`)
+setDispensariesArr(likes.data)
+console.log(likes,"llllllllllllllllllllllllllllllll")
+  
+}
     return (
       <>
+      
       <Nav myFunction={serch} fun={ setvalue}/> 
 
         <div className="container">
@@ -33,14 +45,7 @@ export default function Dispensaries() {
                    
       {
       DispensariesArr.map((elem, i) => {
-        const likefun=async(id)=>{
-  
-          console.log(id);
-      const likes = await axios.post(`http://localhost:5000/like/${id}`)
-      setDispensariesArr(likes.data)
-      console.log(likes,"llllllllllllllllllllllllllllllll")
-        
-      }
+       
           return (
      <>
             <div className=" col-md-3  p-2 text-center" key={i} >
@@ -49,7 +54,7 @@ export default function Dispensaries() {
            <img onClick={()=>{goToCard(elem.id)}} className="w-100 h-100" src={elem.img} alt="mj"style={{width:"100px"}} /></div>
            <div class="container">
            <p>{elem.name} </p>
-           {  DispensariesArr[i].key === true ?  <button  onClick={()=>{likefun(elem.id)}}> 🧡</button> :  <button  onClick={()=>{likefun(elem.id)}}> 💔</button>}
+           {  DispensariesArr[i].key === true ?  <h3  onClick={()=>{likefun(elem.id)}}> 😍</h3> :  <h3  onClick={()=>{likefun(elem.id)}}>🙂 </h3>}
 
             </div>
             </div>
